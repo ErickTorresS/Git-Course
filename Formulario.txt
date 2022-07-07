@@ -1,1 +1,82 @@
 git init nombre // Crear proyecto
+git add nombre // Agrega un archivo al repositorio
+git commit // Commit de multiples lineas
+git commit -m "Mensaje" // Commit de mensaje corto
+git status // Ver status de los archivos
+rm -rf nombre // Limpia repositorio
+git clone url // Clonar un repositorio
+git pull origin main // actualizar repositorio - siempre hacer pull antes de un push
+git push origin main // subir cambios al repositorio
+git commit -a // Bandera para usar git add *
+git ls-files // Muestra archivos con seguimiento en git
+git reset HEAD file // Descartar cambios de staging area 
+git checkout -- file // Deshace los cambios de un archivo a el ultimo commit
+git mv filename newfilename // renombrar
+git mv filename directory // mover
+git rm filename // Eliminar archivos
+git log // Historial de commits
+git log --oneline --graph --decorate // Historial de commits mas visual
+git config --global alias.nombre "Comando" // creas un alias para un comando para usar git nombre 
+Modificable en .gitconfig
+.gitignore // Archivo para marcar archivos a ignorar
+    file.txt
+    *.png
+    folder/
+git diff // Compara archivos entre los staging area
+git difftool // Lo mismo que diff pero mas grafico
+git diff HEAD // Compara con el commit de HEAD 
+git difftool HEAD
+git diff --stage HEAD
+git diff -- filename // hacer diff a un solo archivo
+git diff commitid commitid2 // comparar dos commits
+git diff master origin/master // comparar commits entre local y remoto
+git branch -a // lista las ramas -a lista tambien las remotas
+git branch nombre // Crea una rama
+git checkout nombre // cambiar de rama
+git branch -m nombre nuevonombre // Renombrar rama
+git branch -d nombre // Elimina una rama
+git checkout -b nombre // Crea una rama y cambia a ella
+git commit -am "" // Usa git add *
+git diff rama rama // compara ramas
+git merge rama // Hace merge de la rama especificada a la rama actual
+git merge rama --no-ff // Hace merge de la rama especificada a la rama actual sin fast forward
+git mergetool // abre la herramienta que ayuda a resolver conflictos
+git rebase rama // Sobre pone los commits de esta rama sobre los commits de la rama seleccionada
+git fetch origin/master // actualiza las referencias del repositorio local
+git pull --rebase origin master // Agrega los commits remotos a la base del repositorio local y pone ensima los cambios de 
+git stash // revierte los archivos en staging area pero los guarda
+git stash apply // vuelve a aplicar los cambios reveridos en el ultimo stash
+git stash list // muestra todos los stash guardados
+git stash drop // Borra el ultimo stash
+git ls-files // muestra todos los archivos con seguimiento
+git stash -u // incluye archivos que no reciben seguimiento siempre que no esten en el .ignore
+git stash pop // aplica y elimina el ultimo stash
+git stash save "" // agrega un mensaje al stage 
+git stash show stash@{index} // muestra un stash
+git stash apply stash@{index} // aplica un stash especifico, funciona para todo git stash
+git stash clear // Borra todo en stash
+git stash branch nombre // Aplica el ultimo stash pero en una rama nueva, dropea el stash
+git tag nombre // crea una etiqueta del momento
+git tag --list // muestra todas las etiquetas
+git show nombretag // muestra detalles del commit con ese tag
+git tag --delete nombre // eliminar una tag
+git tag -a nombre // Puedes agregar anotaciones a un tag
+git commit --amend // te permite modificar el mensaje del commit
+git diff tag tag2 // compara los commit con los tag
+git tag -a nombre idcommit // pone un tag a un commit especifico
+git tag -a nombre -f id commit // cambia el tag a otro commit y te permite modificarlo
+git push origin tag // agrega la tag a github
+git push origin master --tags // Agrega todas las tag locales a github
+git push origin :tag // borra la tag de github
+git reset HEAD^N // regresa el repositorio N commit
+git reflog // muestra un listado de commits y resets
+git reset idcommit // Head se mueve al commit seleccionado
+git reset HEAD@{index} // head se mueve al indice 
+git fetch origin rama // actualiza las referencias de una rama
+git branch nombre origin/rama // descarga una rama para trabajar de forma local
+git cherry-pick idcommit // aplica el commit de otra rama a esta
+
+
+
+*HEAD: pointer
+
